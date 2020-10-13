@@ -1,4 +1,4 @@
-`define DELAY 24'd12_000_000 // 0.5s delay
+`define DELAY 34'd24_000_000 // 1s delay
 
 module led (
     input sys_clk, // 24MHz clk input
@@ -10,11 +10,11 @@ module led (
 
     always @(posedge sys_clk or negedge sys_rst_n) begin
         if (!sys_rst_n)
-            counter <= 24'd0;
+            counter <= 34'd0;
         else if (counter < `DELAY)
             counter <= counter + 1;
         else
-            counter <= 24'd0;
+            counter <= 34'd0;
     end
 
     always @(posedge sys_clk or negedge sys_rst_n) begin
