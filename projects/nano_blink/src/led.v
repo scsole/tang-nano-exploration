@@ -1,4 +1,4 @@
-`define DELAY 34'd24_000_000 // 1s delay
+`define DELAY 34'd12_000_000 // 1s delay
 
 module led (
     input sys_clk, // 24MHz clk input
